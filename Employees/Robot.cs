@@ -33,6 +33,11 @@ namespace Employees
 
         public int Somethingelse;
 
+        public Robot()
+        {
+            
+        }
+
         public Robot(string name, int salary)
         {
            _name = name;
