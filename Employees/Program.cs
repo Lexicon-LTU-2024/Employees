@@ -1,16 +1,20 @@
-﻿namespace Employees
+﻿
+namespace Employees
 {
     internal class Program
     {
+        private static PayRoll payRoll = new PayRoll();
+
         static void Main(string[] args)
         {
-            PayRoll payRoll = new PayRoll();
-            payRoll.AddEmployee("Anna", 45000);
 
-            Employee employee = new Employee("Kalle", 30000);
-            employee.Name = "Nisse";
-            int salary = employee.Salary;
+            SeedData();
          
+        }
+
+        private static void SeedData()
+        {
+            payRoll.AddEmployee("Anna", 45000);
         }
     }
 }
