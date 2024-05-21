@@ -3,18 +3,21 @@ namespace Employees
 {
     internal class Program
     {
-        private static PayRoll payRoll = new PayRoll();
+        private static PayRoll _payRoll = new PayRoll();
 
         static void Main(string[] args)
         {
-
+          
             SeedData();
-         
+            
+
+
+
         }
 
         private static void SeedData()
         {
-            payRoll.AddEmployee("Anna", 45000);
+            _payRoll.AddEmployee("Anna", 45000);
         }
     }
 }

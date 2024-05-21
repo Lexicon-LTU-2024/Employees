@@ -33,6 +33,11 @@ namespace Employees
 
         public int Somethingelse;
 
+        public static void Count()
+        {
+            Salary = 50;
+        }
+
         public Robot()
         {
             
