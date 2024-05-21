@@ -19,5 +19,11 @@ namespace Employees
         {
             _employees.Add(new Employee(name, salary)); 
         }
+
+        public List<Employee> GetEmployees()
+        {
+            //ToDo: Fix not good!!!!
+            return _employees;
+        }
     }
 }

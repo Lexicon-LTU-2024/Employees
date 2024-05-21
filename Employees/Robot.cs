@@ -35,7 +35,7 @@ namespace Employees
 
         public static void Count()
         {
-            Salary = 50;
+           // Salary = 50;
         }
 
         public Robot()
