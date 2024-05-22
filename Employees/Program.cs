@@ -1,6 +1,8 @@
 ﻿
 
 
+using System.Threading.Channels;
+
 namespace Employees
 {
     internal class Program
@@ -13,19 +15,15 @@ namespace Employees
         static void Main(string[] args)
         {
 
-            Employee kalle = new Employee("Kalle", 35000);
-            _payRoll.AddEmployee(kalle);
+            //Employee kalle = new Employee("Kalle", 35000);
+            //_payRoll.AddEmployee(kalle);
 
-            List<Employee> employees = _payRoll.GetEmployees();
-            Console.WriteLine(employees[0].Name);
+            //List<Employee> employees = _payRoll.GetEmployees();
+            //Console.WriteLine(employees[0].Name);
 
-            employees[0].Name = "Anna";
-            List<Employee> after = _payRoll.GetEmployees();
-            Console.WriteLine(after[0].Name);
-
-
-
-
+            //employees[0].Name = "Anna";
+            //List<Employee> after = _payRoll.GetEmployees();
+            //Console.WriteLine(after[0].Name);
 
             SeedData();
 
@@ -33,19 +31,17 @@ namespace Employees
             {
                 ShowMainMeny();
                 var input = Console.ReadLine()!;
-                //var r = new Robot();
-                //Robot r2 = new();
 
                 switch (input)
                 {
                     case "1":
-
+                        AddEmployee();
                         break;   
                     case "2":
                         PrintEmployees();
                         break;   
                     case "Q":
-
+                        Environment.Exit(0);
                         break;
                     default:
                         break;
@@ -53,6 +49,34 @@ namespace Employees
 
 
             } while (true);
+
+        }
+
+        private static void AddEmployee()
+        {
+            bool success = false;
+            string name;
+
+            do
+            {
+                Console.WriteLine("Name: ");
+                name = Console.ReadLine()!;
+
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    Console.WriteLine("You must enter a valid name");
+                }
+                else
+                {
+                    success = true;
+                }
+
+
+            } while (!success);
+
+
+            Console.WriteLine(name);
+
 
         }
 
