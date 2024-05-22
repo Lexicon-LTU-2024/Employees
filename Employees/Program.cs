@@ -1,6 +1,7 @@
 ﻿
 
 
+using Employees.Helpers;
 using System.Threading.Channels;
 
 namespace Employees
@@ -54,25 +55,7 @@ namespace Employees
 
         private static void AddEmployee()
         {
-            bool success = false;
-            string name;
-
-            do
-            {
-                Console.WriteLine("Name: ");
-                name = Console.ReadLine()!;
-
-                if (string.IsNullOrWhiteSpace(name))
-                {
-                    Console.WriteLine("You must enter a valid name");
-                }
-                else
-                {
-                    success = true;
-                }
-
-
-            } while (!success);
+            
 
 
             Console.WriteLine(name);
