@@ -26,7 +26,7 @@ namespace Employees
         {
             _employees.Add(employee);
         }
-        public void AddEmployee(string name, int salary)
+        public void AddEmployee(string name, uint salary)
         {
             //Validate
             _employees.Add(new Employee(name, salary)); 

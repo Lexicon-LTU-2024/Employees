@@ -3,9 +3,9 @@
     internal class Employee
     {
         public string Name { get; }
-        public int Salary { get; }
+        public uint Salary { get; }
 
-        public Employee(string name, int salary)
+        public Employee(string name, uint salary)
         {
             Name = name;
             Salary = salary;

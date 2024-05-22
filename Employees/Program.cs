@@ -55,11 +55,11 @@ namespace Employees
 
         private static void AddEmployee()
         {
-            
 
+            string name = Util.AskForString("Name");
+            uint salary = Util.AskForUInt("Salary");
 
-            Console.WriteLine(name);
-
+            _payRoll.AddEmployee(name, salary);
 
         }
 
@@ -67,7 +67,7 @@ namespace Employees
         {
             List<Employee> employees = _payRoll.GetEmployees();
             // var employees = _payRoll.GetEmployees();
-            employees = null;
+            //employees = null;
 
             foreach (Employee employee in employees)
             {

@@ -1,20 +1,21 @@
-﻿namespace Employees.Helpers
+﻿
+namespace Employees.Helpers
 {
     public static class Util
     {
-        public static string AskForString()
+        public static string AskForString(string prompt)
         {
             bool success = false;
-            string name;
+            string answer;
 
             do
             {
-                Console.WriteLine("Name: ");
-                name = Console.ReadLine()!;
+                Console.WriteLine($"{prompt}: ");
+                answer = Console.ReadLine()!;
 
-                if (string.IsNullOrWhiteSpace(name))
+                if (string.IsNullOrWhiteSpace(answer))
                 {
-                    Console.WriteLine("You must enter a valid name");
+                    Console.WriteLine($"You must enter a valid {prompt}");
                 }
                 else
                 {
@@ -24,7 +25,21 @@
 
             } while (!success);
 
-            return name;
+            return answer;
+        }
+
+        public static uint AskForUInt(string prompt)
+        {
+            do
+            {
+                string input = AskForString(prompt);
+
+                if(uint.TryParse(input, out uint result))
+                {
+                    return result;
+                }
+
+            } while (true);
         }
     }
 }
