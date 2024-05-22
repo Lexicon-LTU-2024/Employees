@@ -15,15 +15,22 @@ namespace Employees
             _employees = new List<Employee>();
         }
 
-        public void AddEmployee(string name, int salary)
-        {
-            _employees.Add(new Employee(name, salary)); 
-        }
 
         public List<Employee> GetEmployees()
         {
             //ToDo: Fix not good!!!!
-            return _employees;
+            return _employees.ToList();
         }
+
+        internal void AddEmployee(Employee employee)
+        {
+            _employees.Add(employee);
+        }
+        public void AddEmployee(string name, int salary)
+        {
+            //Validate
+            _employees.Add(new Employee(name, salary)); 
+        } 
+        
     }
 }

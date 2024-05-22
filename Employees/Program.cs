@@ -12,7 +12,21 @@ namespace Employees
         //Måste vara static
         static void Main(string[] args)
         {
-          
+
+            Employee kalle = new Employee("Kalle", 35000);
+            _payRoll.AddEmployee(kalle);
+
+            List<Employee> employees = _payRoll.GetEmployees();
+            Console.WriteLine(employees[0].Name);
+
+            employees[0].Name = "Anna";
+            List<Employee> after = _payRoll.GetEmployees();
+            Console.WriteLine(after[0].Name);
+
+
+
+
+
             SeedData();
 
             do
@@ -44,12 +58,13 @@ namespace Employees
 
         private static void PrintEmployees()
         {
-          //  List<Employee> employees = _payRoll.GetEmployees();
-            var employees = _payRoll.GetEmployees();
+            List<Employee> employees = _payRoll.GetEmployees();
+            // var employees = _payRoll.GetEmployees();
+            employees = null;
 
             foreach (Employee employee in employees)
             {
-                Console.WriteLine($"Name: {employee.Name} Salary: {employee.Salary}");
+                Console.WriteLine(employee.Print());
             }
         }
 

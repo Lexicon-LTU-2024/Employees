@@ -87,7 +87,8 @@ namespace Employees
         {
             //Validate
             _name = value;
-            Salary = 50;        }
+            Salary = 50;        
+        }
 
         public string GetName()
         {
