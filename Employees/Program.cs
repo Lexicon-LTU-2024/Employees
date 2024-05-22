@@ -7,6 +7,9 @@ namespace Employees
     {
         private static PayRoll _payRoll = new PayRoll();
 
+        //Programmets startpunkt
+        //Får bara finnas EN!
+        //Måste vara static
         static void Main(string[] args)
         {
           
