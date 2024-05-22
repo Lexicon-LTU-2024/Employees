@@ -35,13 +35,13 @@ namespace Employees
 
                 switch (input)
                 {
-                    case "1":
+                    case MenyHelpers.Add:
                         AddEmployee();
                         break;   
-                    case "2":
+                    case MenyHelpers.Print:
                         PrintEmployees();
                         break;   
-                    case "Q":
+                    case MenyHelpers.Quit:
                         Environment.Exit(0);
                         break;
                     default:
@@ -77,9 +77,9 @@ namespace Employees
 
         private static void ShowMainMeny()
         {
-            Console.WriteLine("1. Add");
-            Console.WriteLine("2. Print");
-            Console.WriteLine("Q. Quit");
+            Console.WriteLine($"{MenyHelpers.Add}. Add");
+            Console.WriteLine($"{MenyHelpers.Print}. Print");
+            Console.WriteLine($"{MenyHelpers.Quit}. Quit");
         }
 
         private static void SeedData()
