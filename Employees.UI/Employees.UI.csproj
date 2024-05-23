@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Employees.UI\Employees.UI.csproj" />
-  </ItemGroup>
-
 </Project>

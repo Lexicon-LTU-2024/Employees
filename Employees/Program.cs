@@ -9,6 +9,7 @@ namespace Employees
     internal class Program
     {
         private static PayRoll _payRoll = new PayRoll();
+        private static ConsoleUI _ui = new();
 
         //Programmets startpunkt
         //Får bara finnas EN!
@@ -31,7 +32,7 @@ namespace Employees
             do
             {
                 ShowMainMeny();
-                var input = Console.ReadLine()!;
+                var input = _ui.GetInput();
 
                 switch (input)
                 {
@@ -71,15 +72,15 @@ namespace Employees
 
             foreach (Employee employee in employees)
             {
-                Console.WriteLine(employee.Print());
+                _ui.Print(employee.Print());
             }
         }
 
         private static void ShowMainMeny()
         {
-            Console.WriteLine($"{MenyHelpers.Add}. Add");
-            Console.WriteLine($"{MenyHelpers.Print}. Print");
-            Console.WriteLine($"{MenyHelpers.Quit}. Quit");
+            _ui.Print($"{MenyHelpers.Add}. Add");
+            _ui.Print($"{MenyHelpers.Print}. Print");
+            _ui.Print($"{MenyHelpers.Quit}. Quit");
         }
 
         private static void SeedData()
