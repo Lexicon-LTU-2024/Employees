@@ -16,7 +16,7 @@ namespace Employees
         }
 
 
-        public List<Employee> GetEmployees()
+        public IEnumerable<Employee> GetEmployees()
         {
             //ToDo: Fix not good!!!!
             return _employees.ToList();

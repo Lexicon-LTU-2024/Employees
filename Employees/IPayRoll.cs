@@ -5,6 +5,6 @@ namespace Employees
     {
         void AddEmployee(Employee employee);
         void AddEmployee(string name, uint salary);
-        List<Employee> GetEmployees();
+        IEnumerable<Employee> GetEmployees();
     }
 }
