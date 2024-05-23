@@ -90,9 +90,9 @@ namespace Employees
             Salary = 50;        
         }
 
-        public string GetName()
-        {
-            return _name;
-        }
+        public string GetName() => _name;
+        //{
+        //    return _name;
+        //}
     }
 }
