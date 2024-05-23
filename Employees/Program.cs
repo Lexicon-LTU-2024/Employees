@@ -2,6 +2,7 @@
 
 
 using Employees.Helpers;
+using Employees.UI;
 using System.Threading.Channels;
 
 namespace Employees
@@ -9,7 +10,7 @@ namespace Employees
     internal class Program
     {
         private static PayRoll _payRoll = new PayRoll();
-        private static ConsoleUI _ui = new();
+        private static IUI _ui = new MockUI();
 
         //Programmets startpunkt
         //Får bara finnas EN!
@@ -57,8 +58,8 @@ namespace Employees
         private static void AddEmployee()
         {
 
-            string name = Util.AskForString("Name");
-            uint salary = Util.AskForUInt("Salary");
+            string name = Util.AskForString("Name", _ui);
+            uint salary = Util.AskForUInt("Salary", _ui);
 
             _payRoll.AddEmployee(name, salary);
 

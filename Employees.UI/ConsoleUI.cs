@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Employees.UI
 {
-    public class ConsoleUI
+    public interface IUI
+    {
+        string GetInput();
+        void Print(string message);
+    }
+
+    public class ConsoleUI : IUI
     {
         public void Print(string message)
         {
@@ -16,6 +22,19 @@ namespace Employees.UI
         public string GetInput()
         {
             return Console.ReadLine() ?? string.Empty;
+        }
+    }
+
+    public class MockUI : IUI
+    {
+        public string GetInput()
+        {
+            return "1";
+        }
+
+        public void Print(string message)
+        {
+            
         }
     }
 }
