@@ -9,7 +9,7 @@ namespace Employees
 {
     internal class Program
     {
-        private static PayRoll _payRoll = new PayRoll();
+        private static IPayRoll _payRoll = new PayRoll();
         private static IUI _ui = new MockUI();
 
         //Programmets startpunkt
@@ -18,15 +18,10 @@ namespace Employees
         static void Main(string[] args)
         {
 
-            //Employee kalle = new Employee("Kalle", 35000);
-            //_payRoll.AddEmployee(kalle);
+            //MockUI mockUI = new MockUI();
+            //mockUI.SetInput = "fem";
+            //var result = Util.AskForUInt("", mockUI);
 
-            //List<Employee> employees = _payRoll.GetEmployees();
-            //Console.WriteLine(employees[0].Name);
-
-            //employees[0].Name = "Anna";
-            //List<Employee> after = _payRoll.GetEmployees();
-            //Console.WriteLine(after[0].Name);
 
             SeedData();
 

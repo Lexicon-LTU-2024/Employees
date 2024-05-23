@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employees
 {
-    internal class PayRoll 
+    internal class PayRoll : IPayRoll
     {
         private List<Employee> _employees;
 
