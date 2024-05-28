@@ -1,6 +1,6 @@
 ﻿namespace Employees
 {
-    internal class Employee
+    internal class Employee : Object
     {
         public string Name { get; }
         public uint Salary { get; }
@@ -24,11 +24,17 @@
         {
             Name = name;
             Salary = salary;
+            object on = new Object();
         }
 
-        public string Print()
-        {
-            return $"Name: {Name} Salary: {Salary} SalaryLevel: {SalaryLevel}";
-        }
+        //public string Print()
+        //{
+        //    return $"Name: {Name} Salary: {Salary} SalaryLevel: {SalaryLevel}";
+        //}
+
+        public override string ToString() => $"Name: {Name} Salary: {Salary} SalaryLevel: {SalaryLevel} {base.ToString()}";
     }
+
+
+
 }

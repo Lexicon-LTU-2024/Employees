@@ -65,7 +65,8 @@ namespace Employees
            
             foreach (Employee employee in employees)
             {
-                _ui.Print(employee.Print());
+                Console.WriteLine(employee);
+                _ui.Print(employee.ToString());
             }
         }
 
@@ -82,6 +83,13 @@ namespace Employees
             _payRoll.AddEmployee("Bengt", 70000);
             _payRoll.AddEmployee("Nisse", 45000);
             _payRoll.AddEmployee("Pelle", 25000);
+            Do(1);
+            Do(new PayRoll());
+        }
+
+        private void Do(object obj)
+        {
+
         }
     }
 }
