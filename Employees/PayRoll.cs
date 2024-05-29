@@ -18,17 +18,27 @@ namespace Employees
 
         public IEnumerable<Employee> GetEmployees()
         {
-            //ToDo: Fix not good!!!!
             return _employees.ToList();
         }
 
         public void AddEmployee(Employee employee)
         {
+            if (employee is null)
+            {
+                throw new ArgumentNullException(nameof(employee));
+            }
+
             _employees.Add(employee);
         }
         public void AddEmployee(string name, uint salary)
         {
-            //Validate
+            ArgumentNullException.ThrowIfNull(name, "name");
+
+            //if (name is null)
+            //{
+            //    throw new ArgumentNullException(nameof(name));
+            //}
+
             _employees.Add(new Employee(name, salary));
         }
 

@@ -53,6 +53,7 @@ namespace Employees
             string name = Util.AskForString("Name", _ui);
             uint salary = Util.AskForUInt("Salary", _ui);
 
+
             _payRoll.AddEmployee(name, salary);
 
         }

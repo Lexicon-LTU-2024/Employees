@@ -15,10 +15,36 @@ namespace Employees
         //Måste vara static
         static void Main(string[] args)
         {
+
+            //string name = Console.ReadLine()!;
+            //int x = int.Parse(name);
             IPayRoll payRoll = new PayRoll();
             IUI ui = new ConsoleUI();
             Main main = new Main(payRoll, ui);
-            main.Run();
+
+            try
+            {
+                main.Run();
+                payRoll.AddEmployee(null, 35000);
+
+            }
+            catch (ArgumentNullException ex)
+            {
+
+                //...
+            }
+            catch(ArgumentException ex)
+            {
+                //....
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                main.Run();
+            }
 
         }
 
