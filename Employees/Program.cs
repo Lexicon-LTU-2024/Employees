@@ -25,7 +25,7 @@ namespace Employees
             try
             {
                 main.Run();
-                payRoll.AddEmployee(null, 35000);
+               // payRoll.AddEmployee(null, 35000);
 
             }
             catch (ArgumentNullException ex)
