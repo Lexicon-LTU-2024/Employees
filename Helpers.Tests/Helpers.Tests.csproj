@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Employees.Helpers\Employees.Helpers.csproj" />
+    <ProjectReference Include="..\Employees\Employees.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿
 using System.Runtime.CompilerServices;
 
-//[assembly: InternalsVisibleTo("Helpers.Tests")]
+[assembly: InternalsVisibleTo("Helpers.Tests")]
 namespace Employees
 {
     internal class Employee : Object
